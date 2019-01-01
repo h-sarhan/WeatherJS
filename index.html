@@ -29,9 +29,50 @@
 					<button
 						class="btn btn-primary text-light mt-3 "
 						style="max-width: 170px;"
+						data-toggle="modal"
+						data-target="#changeLocation"
 					>
 						Change Location
 					</button>
+					<div
+						class="modal"
+						id="changeLocation"
+						style="display:none;"
+						aria-hidden="true"
+					>
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3 class="modal-title">Change Location</h3>
+									<button class="close text-danger" data-dismiss="modal">
+										X
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="form-group" style="text-align:left">
+										<label for="City" class="ml-2" style="text-align:left"
+											>City:</label
+										>
+										<input
+											type="text"
+											class="form-control"
+											placeholder="City"
+											id="city"
+										/>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										class="btn btn-primary"
+										data-dismiss="modal"
+										id="submit"
+									>
+										Submit
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
