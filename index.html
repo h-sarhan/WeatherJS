@@ -17,10 +17,12 @@
 		<div class="container">
 			<div class="card card-body mt-5 text-center p-5">
 				<div id="error"></div>
-				<h1 class="card-title text-light" id="City">City, Country</h1>
-				<h2 class="text-dark weather-info" id="weatherStatus">Weather Info</h2>
-				<h2 class="text-light" id="degrees">#</h2>
-				<div id="icon"></div>
+				<h1 class="card-title text-light" id="city"></h1>
+				<h2 class="text-dark weather-info" id="weatherStatus"></h2>
+                <h2 class="text-light" id="degrees"></h2>
+                <div class="container">
+                <img id="icon" src="" style="max-width:50px;"></img>
+            </div>
 				<ul class="list-group mt-3">
 					<li class="list-group-item bg-light text-muted " id="humidity"></li>
 					<li class="list-group-item bg-light text-muted" id="windSpeed"></li>
@@ -57,7 +59,7 @@
 											type="text"
 											class="form-control"
 											placeholder="City"
-											id="city"
+											id="newCity"
 										/>
 									</div>
 								</div>
