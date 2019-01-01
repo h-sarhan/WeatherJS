@@ -13,11 +13,21 @@ class Weather {
 		);
 		apiRes.then(res => {
 			let weatherData = res.json();
-			weatherData.then(data => {
-				console.log(data);
-				let a = [];
-				a.push(data.main);
-			});
+			weatherData
+				.then(data => {
+					console.log(data);
+					let a = [];
+					a.push(this.city);
+					a.push(data.weather[0].main);
+					a.push(data.main.temp - 273);
+					a.push(data.weather[0].icon);
+					a.push(data.main.humidity);
+					a.push(data.wind.speed);
+					return a;
+				})
+				.catch(err => {
+					showError(err);
+				});
 		});
 	}
 }
